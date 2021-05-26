@@ -19,25 +19,28 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="HXT-Ke-dTb" userLabel="Stack_View_Button">
                                 <rect key="frame" x="42.5" y="567" width="290" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-gS-VQr" userLabel="Button1">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-gS-VQr" userLabel="Button1">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="Layout 1"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfS-eL-mg9"/>
+                                            <action selector="buttonLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07q-q1-Od2"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-BA-xgp" userLabel="Button2">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugT-BA-xgp" userLabel="Button2">
                                         <rect key="frame" x="105" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="Layout 2"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MqX-xj-yxT"/>
+                                            <action selector="buttonLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N7R-fJ-gXf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-bC-V3c" userLabel="Button3">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQW-bC-V3c" userLabel="Button3">
                                         <rect key="frame" x="210" y="0.0" width="80" height="80"/>
                                         <state key="normal" image="Layout 3"/>
+                                        <state key="selected" image="Selected"/>
                                         <connections>
-                                            <action selector="buttonLayout3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vUI-Qu-IMp"/>
+                                            <action selector="buttonLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yH-DA-0gW"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -55,11 +58,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="135.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="picto-blue"/>
+                                                        <connections>
+                                                            <action selector="tapButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEo-hl-Of6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU6-iQ-AH3">
                                                         <rect key="frame" x="144.5" y="0.0" width="134.5" height="135.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="picto-blue"/>
+                                                        <connections>
+                                                            <action selector="tapButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctC-fj-w1R"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -70,11 +79,17 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="135.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="picto-blue"/>
+                                                        <connections>
+                                                            <action selector="tapButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1n-mL-EJV"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1O-Vy-MUx">
                                                         <rect key="frame" x="144.5" y="0.0" width="134.5" height="135.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="picto-blue"/>
+                                                        <connections>
+                                                            <action selector="tapButton4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsS-e3-Wwo"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -90,13 +105,6 @@
                                     <constraint firstItem="xW9-Tz-8Fe" firstAttribute="leading" secondItem="axI-Nw-UYU" secondAttribute="leading" constant="8" id="fgq-ee-9P0"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pom-NG-dMW">
-                                <rect key="frame" x="161" y="62" width="80" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.74117654560000001" green="0.8392156959" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -115,6 +123,9 @@
                         <outlet property="button3" destination="1iN-aX-A6o" id="txm-it-MYQ"/>
                         <outlet property="button4" destination="v1O-Vy-MUx" id="tvb-Hl-ZwP"/>
                         <outlet property="viewPhoto" destination="axI-Nw-UYU" id="tsF-pi-Xvb"/>
+                        <outletCollection property="buttonsDown" destination="oEb-gS-VQr" collectionClass="NSMutableArray" id="UYl-TO-uKk"/>
+                        <outletCollection property="buttonsDown" destination="ugT-BA-xgp" collectionClass="NSMutableArray" id="Jmt-72-4S2"/>
+                        <outletCollection property="buttonsDown" destination="cQW-bC-V3c" collectionClass="NSMutableArray" id="jKU-aj-32E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -126,6 +137,7 @@
         <image name="Layout 1" width="80" height="80"/>
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
+        <image name="Selected" width="80" height="80"/>
         <image name="picto-blue" width="48" height="48"/>
     </resources>
 </document>

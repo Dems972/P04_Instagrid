@@ -16,28 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon-180" translatesAutoresizingMaskIntoConstraints="NO" id="53V-WL-dPl">
-                                <rect key="frame" x="142" y="288" width="90" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="53V-WL-dPl" secondAttribute="height" multiplier="1:1" id="YkQ-8W-gUu"/>
-                                </constraints>
+                                <rect key="frame" x="97.5" y="243.5" width="180" height="180"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="F7N-q8-EvN">
-                                <rect key="frame" x="119" y="386" width="137" height="90"/>
+                                <rect key="frame" x="98" y="438" width="181" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="F7N-q8-EvN" secondAttribute="height" multiplier="137:90" id="GeW-fN-qoY"/>
+                                    <constraint firstAttribute="width" constant="181" id="exZ-NW-yA5"/>
+                                    <constraint firstAttribute="height" constant="47" id="klE-fp-Xd8"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.74117654560000001" green="0.8392156959" blue="0.88235294819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="53V-WL-dPl" secondAttribute="trailing" constant="143" id="ADL-0s-dOP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F7N-q8-EvN" secondAttribute="bottom" constant="191" id="AGd-bm-PMc"/>
-                            <constraint firstItem="53V-WL-dPl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="LCC-Lt-Vwn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="53V-WL-dPl" secondAttribute="bottom" constant="289" id="PS8-38-cxK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F7N-q8-EvN" secondAttribute="trailing" constant="119" id="PX6-lr-uPg"/>
-                            <constraint firstItem="53V-WL-dPl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="288" id="Pqi-nF-fap"/>
-                            <constraint firstItem="F7N-q8-EvN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="vAm-ro-e3F"/>
+                            <constraint firstItem="F7N-q8-EvN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="EJ7-7Z-drP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F7N-q8-EvN" secondAttribute="trailing" constant="96" id="OB8-2y-6CZ"/>
+                            <constraint firstItem="53V-WL-dPl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XvY-qo-W1A"/>
+                            <constraint firstItem="53V-WL-dPl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="j6R-lT-Oty"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F7N-q8-EvN" secondAttribute="bottom" constant="182" id="uLA-uj-SAu"/>
+                            <constraint firstItem="F7N-q8-EvN" firstAttribute="top" secondItem="53V-WL-dPl" secondAttribute="bottom" constant="14.5" id="vRZ-iQ-eg6"/>
                         </constraints>
                     </view>
                 </viewController>
