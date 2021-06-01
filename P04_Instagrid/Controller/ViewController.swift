@@ -17,14 +17,13 @@ class ViewController: UIViewController
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var button4: UIButton!
 
-
     @IBOutlet var buttonsDown: [UIButton]!
 
+    @IBOutlet weak var swipetext: UILabel!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         for family : String in UIFont.familyNames
         {
@@ -34,7 +33,10 @@ class ViewController: UIViewController
                 print("==\(names)")
             }
         }
-        
+
+        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
+        swipeUpGesture.direction = .up
+        self.view.addGestureRecognizer(swipeUpGesture)
     }
 
 
@@ -103,6 +105,15 @@ class ViewController: UIViewController
         addImage()
     }
 
+    @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
+    {
+        print("gesture ok")
+        let activity = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
+        activity.popoverPresentationController?.sourceView = self.view
+
+        self.present(activity, animated: true, completion: nil)
+    }
+
 
     /*@IBAction func tapButton(_ sender: UIButton)
     {
@@ -133,7 +144,7 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
 
-        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
        {
             switch recover
             {
