@@ -22,23 +22,7 @@ class ViewController: UIViewController
 
     @IBOutlet weak var viewSwipe: UIView!
     
-    var recover = 1 // reception the position of image
-
-
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-//        for family : String in UIFont.familyNames
-//        {
-//            print(family)
-//            for names : String in UIFont.fontNames(forFamilyName: family)
-//            {
-//                print("==\(names)")
-//            }
-//        }
-
-    }
+    var recover = 1
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator)
     {
@@ -56,7 +40,6 @@ class ViewController: UIViewController
         }
         self.viewSwipe.addGestureRecognizer(swipeGesture)
     }
-
 
     @IBAction func buttonLayout(_ sender: UIButton)
     {
@@ -93,9 +76,6 @@ class ViewController: UIViewController
         present(pickImage, animated: true)
     }
 
-
-
-
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
     {
         print("gesture ok")
@@ -104,9 +84,6 @@ class ViewController: UIViewController
 
         self.present(activity, animated: true, completion: nil)
     }
-
-    // faire une fonction pour dire si on est en forma horizontal on fait un swipe
-    //swipeUpGesture.direction = .left sinon on garde le swipeUpGesture.direction = .up
 
     @IBAction func tapButton(_ sender: UIButton)
     {
