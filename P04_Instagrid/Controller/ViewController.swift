@@ -24,21 +24,16 @@ class ViewController: UIViewController
     
     var recover = 1
 
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        swipe()
+
+    }
+
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator)
     {
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
-
-        if view.bounds.size.height > view.bounds.size.width
-        {
-            print ("landscape")
-            swipeGesture.direction = .up
-        }
-        else
-        {
-            print ("portrait")
-            swipeGesture.direction = .left
-        }
-        self.viewSwipe.addGestureRecognizer(swipeGesture)
+        swipe()
     }
 
     @IBAction func buttonLayout(_ sender: UIButton)
@@ -74,6 +69,23 @@ class ViewController: UIViewController
         pickImage.delegate = self
         pickImage.allowsEditing = true
         present(pickImage, animated: true)
+    }
+
+    private func swipe()
+    {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
+
+        if view.bounds.size.height > view.bounds.size.width
+        {
+            print ("landscape")
+            swipeGesture.direction = .up
+        }
+        else 
+        {
+            print ("portrait")
+            swipeGesture.direction = .left
+        }
+        self.viewSwipe.addGestureRecognizer(swipeGesture)
     }
 
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
