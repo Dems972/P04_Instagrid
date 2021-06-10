@@ -19,37 +19,53 @@ class ViewController: UIViewController
 
     @IBOutlet var buttonsDown: [UIButton]!
 
-    @IBOutlet weak var swipetext: UILabel!
+
+    @IBOutlet weak var viewSwipe: UIView!
+    
+    var recover = 1 // reception the position of image
+
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        for family : String in UIFont.familyNames
-        {
-            print(family)
-            for names : String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("==\(names)")
-            }
-        }
+//        for family : String in UIFont.familyNames
+//        {
+//            print(family)
+//            for names : String in UIFont.fontNames(forFamilyName: family)
+//            {
+//                print("==\(names)")
+//            }
+//        }
 
-        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
-        swipeUpGesture.direction = .up
-        self.view.addGestureRecognizer(swipeUpGesture)
+    }
+
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator)
+    {
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
+
+        if view.bounds.size.height > view.bounds.size.width
+        {
+            print ("landscape")
+            swipeGesture.direction = .up
+        }
+        else
+        {
+            print ("portrait")
+            swipeGesture.direction = .left
+        }
+        self.viewSwipe.addGestureRecognizer(swipeGesture)
     }
 
 
     @IBAction func buttonLayout(_ sender: UIButton)
     {
-
         for button in buttonsDown
         {
             button.isSelected = false
         }
 
         sender.isSelected = true
-
 
         switch sender.tag
         {
@@ -65,12 +81,10 @@ class ViewController: UIViewController
 
             default :
                 break
-
         }
-
     }
 
-    func addImage()
+    private func addImage()
     {
         let pickImage = UIImagePickerController()
         pickImage.sourceType = .photoLibrary
@@ -79,31 +93,8 @@ class ViewController: UIViewController
         present(pickImage, animated: true)
     }
 
-    var recover = 1 // reception the position of image
 
-    @IBAction func tapButton1(_ sender: UIButton)
-    {
-        recover = 1
-        addImage()
-    }
 
-    @IBAction func tapButton2(_ sender: UIButton)
-    {
-        recover = 2
-        addImage()
-    }
-
-    @IBAction func tapButton3(_ sender: UIButton)
-    {
-        recover = 3
-        addImage()
-    }
-
-    @IBAction func tapButton4(_ sender: UIButton)
-    {
-        recover = 4
-        addImage()
-    }
 
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
     {
@@ -114,8 +105,10 @@ class ViewController: UIViewController
         self.present(activity, animated: true, completion: nil)
     }
 
+    // faire une fonction pour dire si on est en forma horizontal on fait un swipe
+    //swipeUpGesture.direction = .left sinon on garde le swipeUpGesture.direction = .up
 
-    /*@IBAction func tapButton(_ sender: UIButton)
+    @IBAction func tapButton(_ sender: UIButton)
     {
         switch sender.tag
         {
@@ -134,9 +127,7 @@ class ViewController: UIViewController
             default :
                 break
         }
-    }*/
-    
-
+    }
 }
 
 extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate
@@ -159,11 +150,8 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
             default:
                 break
             }
-
        }
-
         picker.dismiss(animated: true, completion: nil)
-
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
@@ -171,4 +159,3 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
         picker.dismiss(animated: true, completion: nil)
     }
 }
-
