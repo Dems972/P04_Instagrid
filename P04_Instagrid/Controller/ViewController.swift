@@ -20,19 +20,39 @@ class ViewController: UIViewController
     @IBOutlet var buttonsDown: [UIButton]!
 
 
-    @IBOutlet weak var viewSwipe: UIView!
-    
+    @IBOutlet weak var viewSwipe: UIStackView!
+
+
     var recover = 1
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        swipe()
+
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
+
+        if view.bounds.size.height > view.bounds.size.width
+        {
+
+            swipeGesture.direction = .up
+        }
+        else
+        {
+
+            swipeGesture.direction = .left
+        }
+        self.viewSwipe.addGestureRecognizer(swipeGesture)
+
 
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator)
     {
+        print("move")
+        swipe()
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         swipe()
     }
 
@@ -75,17 +95,24 @@ class ViewController: UIViewController
     {
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(gestureSwipe(_:)))
 
+        for recognizer in viewSwipe.gestureRecognizers ?? [] {
+                        viewSwipe.removeGestureRecognizer(recognizer)
+            
+                    }
+
+
         if view.bounds.size.height > view.bounds.size.width
-        {
-            print ("landscape")
-            swipeGesture.direction = .up
-        }
-        else 
         {
             print ("portrait")
             swipeGesture.direction = .left
         }
+        else 
+        {
+            print ("landscape")
+            swipeGesture.direction = .up
+        }
         self.viewSwipe.addGestureRecognizer(swipeGesture)
+
     }
 
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
