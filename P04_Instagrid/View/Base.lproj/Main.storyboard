@@ -179,7 +179,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="GYg-Av-2Zr"/>
                                     <constraint firstAttribute="width" secondItem="TRH-WV-zUX" secondAttribute="height" multiplier="141:40" id="Zn9-bC-axd"/>
-                                    <constraint firstAttribute="height" constant="40" id="dyK-Xn-AXh"/>
+                                    <constraint firstAttribute="height" constant="40" id="dyK-Xn-AXh">
+                                        <variation key="heightClass=compact" constant="30"/>
+                                    </constraint>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -248,14 +250,16 @@
                             <constraint firstItem="axI-Nw-UYU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.75" id="5Yd-AR-wG4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HXT-Ke-dTb" secondAttribute="bottom" constant="20" id="7Ig-db-jrI"/>
                             <constraint firstItem="eCJ-Qn-0Jc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="92Y-H4-ht6">
-                                <variation key="heightClass=compact" constant="40"/>
+                                <variation key="heightClass=compact" constant="30"/>
                             </constraint>
                             <constraint firstItem="HXT-Ke-dTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ALI-wY-isp"/>
                             <constraint firstItem="axI-Nw-UYU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ag6-Ub-5gb"/>
                             <constraint firstItem="axI-Nw-UYU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.7" id="CEN-WC-Kqx"/>
                             <constraint firstItem="axI-Nw-UYU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FBt-YK-eSy"/>
+                            <constraint firstItem="axI-Nw-UYU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="I7g-GT-iMU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TRH-WV-zUX" secondAttribute="trailing" constant="117" id="ICx-eg-ylP"/>
                             <constraint firstItem="TRH-WV-zUX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="JfZ-VM-7Ge"/>
+                            <constraint firstItem="axI-Nw-UYU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.4" id="K44-69-Avd"/>
                             <constraint firstItem="eCJ-Qn-0Jc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LH4-Ux-3ko"/>
                             <constraint firstItem="axI-Nw-UYU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.45" id="O5e-o5-zda"/>
                             <constraint firstItem="HXT-Ke-dTb" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.75" id="P7G-LA-G9q"/>
@@ -292,6 +296,8 @@
                                 <exclude reference="Ag6-Ub-5gb"/>
                                 <exclude reference="CEN-WC-Kqx"/>
                                 <exclude reference="FBt-YK-eSy"/>
+                                <exclude reference="I7g-GT-iMU"/>
+                                <exclude reference="K44-69-Avd"/>
                                 <exclude reference="O5e-o5-zda"/>
                                 <exclude reference="fkQ-R7-3oL"/>
                                 <exclude reference="kv4-7j-xqc"/>
@@ -317,7 +323,9 @@
                                 <include reference="4Yt-lb-dAL"/>
                                 <exclude reference="5Yd-AR-wG4"/>
                                 <include reference="Ag6-Ub-5gb"/>
-                                <include reference="CEN-WC-Kqx"/>
+                                <exclude reference="CEN-WC-Kqx"/>
+                                <exclude reference="I7g-GT-iMU"/>
+                                <exclude reference="K44-69-Avd"/>
                                 <exclude reference="SlN-J8-4vd"/>
                                 <exclude reference="fkQ-R7-3oL"/>
                                 <include reference="WEW-T4-MTi"/>

@@ -33,22 +33,17 @@ class ViewController: UIViewController
 
         if view.bounds.size.height > view.bounds.size.width
         {
-
             swipeGesture.direction = .up
         }
         else
         {
-
             swipeGesture.direction = .left
         }
         self.viewSwipe.addGestureRecognizer(swipeGesture)
-
-
     }
 
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator)
     {
-        print("move")
         swipe()
     }
 
@@ -97,18 +92,13 @@ class ViewController: UIViewController
 
         for recognizer in viewSwipe.gestureRecognizers ?? [] {
                         viewSwipe.removeGestureRecognizer(recognizer)
-            
                     }
-
-
         if view.bounds.size.height > view.bounds.size.width
         {
-            print ("portrait")
             swipeGesture.direction = .left
         }
         else 
         {
-            print ("landscape")
             swipeGesture.direction = .up
         }
         self.viewSwipe.addGestureRecognizer(swipeGesture)
@@ -117,7 +107,6 @@ class ViewController: UIViewController
 
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer)
     {
-        print("gesture ok")
         let activity = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
         activity.popoverPresentationController?.sourceView = self.view
 
