@@ -38,8 +38,6 @@ class ViewController: UIViewController
             swipeGesture.direction = .left
         }
         self.viewSwipe.addGestureRecognizer(swipeGesture)
-
-
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -92,14 +90,7 @@ class ViewController: UIViewController
         self.viewSwipe.addGestureRecognizer(swipeGesture)
     }
 
-
-
-
     @objc func gestureSwipe(_ gesture: UISwipeGestureRecognizer) {
-//        let activity = UIActivityViewController(activityItems: ["www.google.com"], applicationActivities: nil)
-//        activity.popoverPresentationController?.sourceView = self.view
-//        self.present(activity, animated: true, completion: nil)
-
         if UIDevice.current.orientation.isLandscape {
             print("left")
             self.animationY(value: -UIScreen.main.bounds.height)
@@ -158,71 +149,6 @@ class ViewController: UIViewController
             })
         }
     }
-    
-//
-//    @objc func panOnGridView(_ sender: UIPanGestureRecognizer) {
-//
-//        switch sender.state {
-//        case .began, .changed:
-//        transformGridViewWith(gesture: sender)
-//        case .cancelled, .ended:
-//        let size = view.bounds
-//
-//        if size.width > size.height { // Si on est en mode paysage
-//        if sender.location(in: self.view).x < view.center.x - 50 {
-//            userLetGoOfGridView(direction: .left)
-//                    } else {
-//                        UIView.animate(withDuration: 0.3) {
-//                            self.viewPhoto.transform = .identity
-//                        }
-//                    }
-//                } else {
-//                    if sender.location(in: self.view).y < view.center.y - 50 {
-//                        userLetGoOfGridView(direction: .up)
-//                    } else {
-//                        UIView.animate(withDuration: 0.3) {
-//                            self.viewPhoto.transform = .identity
-//                        }
-//                    }
-//                }
-//            default:
-//                break
-//            }
-//        }
-//
-//        func transformGridViewWith(gesture: UIPanGestureRecognizer) {
-//            let translation = gesture.translation(in: viewPhoto)
-//            let translationTransform = CGAffineTransform(translationX: translation.x, y: translation.y)
-//            viewPhoto.transform = translationTransform
-//        }
-//
-//    func userLetGoOfGridView(direction: direction) {
-//
-//            let screenWidth = UIScreen.main.bounds.width
-//            var translationTransform: CGAffineTransform
-//
-//            if direction == .up {
-//                translationTransform = CGAffineTransform(translationX: 0, y: -screenWidth - viewPhoto.bounds.height)
-//            } else {
-//                translationTransform = CGAffineTransform(translationX: -screenWidth - viewPhoto.bounds.width, y: 0)
-//            }
-//
-//            UIView.animate(withDuration: 0.3) {
-//                self.viewPhoto.transform = translationTransform
-//            } completion: { (success) in
-//                if success {
-//                    self.swipe()
-//                }
-//            }
-//        }
-//
-//        func gridViewReturnToInitialPos() {
-//
-//            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
-//                self.viewPhoto.transform = .identity
-//            }, completion: nil)
-//        }
-
 }
 
 extension ViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
