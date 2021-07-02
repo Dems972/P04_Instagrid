@@ -289,8 +289,11 @@
                                 <exclude reference="ICx-eg-ylP"/>
                                 <exclude reference="pZS-4d-4as"/>
                                 <exclude reference="scs-fQ-jb3"/>
-                                <exclude reference="92Y-H4-ht6"/>
-                                <exclude reference="LH4-Ux-3ko"/>
+                                <exclude reference="0M8-TG-7Ya"/>
+                                <exclude reference="JfZ-VM-7Ge"/>
+                                <exclude reference="WEW-T4-MTi"/>
+                                <exclude reference="Wdk-Zn-g1O"/>
+                                <exclude reference="h4h-N0-aQD"/>
                                 <exclude reference="4Yt-lb-dAL"/>
                                 <exclude reference="5Yd-AR-wG4"/>
                                 <exclude reference="Ag6-Ub-5gb"/>
@@ -302,11 +305,8 @@
                                 <exclude reference="fkQ-R7-3oL"/>
                                 <exclude reference="kv4-7j-xqc"/>
                                 <exclude reference="qD7-wH-GIN"/>
-                                <exclude reference="0M8-TG-7Ya"/>
-                                <exclude reference="JfZ-VM-7Ge"/>
-                                <exclude reference="WEW-T4-MTi"/>
-                                <exclude reference="Wdk-Zn-g1O"/>
-                                <exclude reference="h4h-N0-aQD"/>
+                                <exclude reference="92Y-H4-ht6"/>
+                                <exclude reference="LH4-Ux-3ko"/>
                                 <exclude reference="ALI-wY-isp"/>
                                 <exclude reference="P7G-LA-G9q"/>
                                 <exclude reference="Xgd-uD-Mwk"/>
@@ -317,9 +317,8 @@
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <include reference="pZS-4d-4as"/>
-                                <include reference="92Y-H4-ht6"/>
-                                <include reference="LH4-Ux-3ko"/>
-                                <exclude reference="qpL-4r-2Sw"/>
+                                <include reference="WEW-T4-MTi"/>
+                                <include reference="Wdk-Zn-g1O"/>
                                 <include reference="4Yt-lb-dAL"/>
                                 <exclude reference="5Yd-AR-wG4"/>
                                 <include reference="Ag6-Ub-5gb"/>
@@ -328,8 +327,9 @@
                                 <exclude reference="K44-69-Avd"/>
                                 <exclude reference="SlN-J8-4vd"/>
                                 <exclude reference="fkQ-R7-3oL"/>
-                                <include reference="WEW-T4-MTi"/>
-                                <include reference="Wdk-Zn-g1O"/>
+                                <include reference="92Y-H4-ht6"/>
+                                <include reference="LH4-Ux-3ko"/>
+                                <exclude reference="qpL-4r-2Sw"/>
                                 <include reference="P7G-LA-G9q"/>
                                 <include reference="Xgd-uD-Mwk"/>
                                 <exclude reference="tbi-gM-wiH"/>
@@ -340,13 +340,13 @@
                                 <include reference="7Ig-db-jrI"/>
                                 <include reference="ICx-eg-ylP"/>
                                 <exclude reference="scs-fQ-jb3"/>
+                                <include reference="0M8-TG-7Ya"/>
+                                <include reference="JfZ-VM-7Ge"/>
+                                <include reference="h4h-N0-aQD"/>
                                 <include reference="FBt-YK-eSy"/>
                                 <include reference="O5e-o5-zda"/>
                                 <include reference="kv4-7j-xqc"/>
                                 <exclude reference="qD7-wH-GIN"/>
-                                <include reference="0M8-TG-7Ya"/>
-                                <include reference="JfZ-VM-7Ge"/>
-                                <include reference="h4h-N0-aQD"/>
                                 <include reference="ALI-wY-isp"/>
                                 <exclude reference="bvo-TC-6sx"/>
                             </mask>
